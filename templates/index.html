@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .nav-item {
+            padding: 0.5rem 1rem;
+        }
+        .nav-item:hover {
+            background-color: rgba(211, 206, 206, 0.1);
+            border-radius: 0.5rem;
+        }
+        .nav-item a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .nav-item a:hover {
+            color: #dedede;
+        }
+        .form-input {
+            width: 70vw;
+            border: 2px solid #4a90e2;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #1e3a8a;
+        }
+        .form-submit {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-submit:hover {
+            background-color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header bg-black py-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl">Python</h1>
+        <nav class="text-white">
+            <ul class="flex space-x-4 text-white">
+                <li class="nav-item">
+                    <a href="#" class="nav text-white">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav text-white">Test Cases</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav text-white">Dashboard</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="container mx-auto mt-8">
+    <div class="flex justify-center">
+        <form action="/open_window" method="post" class="flex">
+            <input class="form-input mr-2" type="url" id="url" name="url" placeholder="Enter URL" required>
+            <button type="submit" class="form-submit">Start</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

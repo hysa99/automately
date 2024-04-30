@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Automate.ly</title>
+</head>
+
+<header class="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
+    <a class="mr-6 hidden lg:flex" href="#" rel="ugc">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6"
+      >
+        <path d="m8 3 4 8 5-5 5 15H2L8 3z"></path>
+      </svg>
+      <span class="sr-only">Acme Inc</span>
+    </a>
+    <nav
+      aria-label="Main"
+      data-orientation="horizontal"
+      dir="ltr"
+      class="relative z-10 max-w-max flex-1 items-center justify-center hidden lg:flex"
+    >
+      <div style="position: relative;">
+        <ul
+          data-orientation="horizontal"
+          class="group flex flex-1 list-none items-center justify-center space-x-1"
+          dir="ltr"
+        >
+          <a
+            class="group inline-flex h-9 w-max items-center justify-center text-white rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+            data-radix-collection-item=""
+            href="#"
+            rel="ugc"
+          >
+            Home
+          </a>
+          <li>
+            <button
+              id="radix-:r0:-trigger-radix-:r1:"
+              data-state="closed"
+              aria-expanded="false"
+              aria-controls="radix-:r0:-content-radix-:r1:"
+              class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group"
+              data-radix-collection-item=""
+            >
+              Features
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                class="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180"
+              >
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <a
+            class="group inline-flex h-9 w-max items-center text-white justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+            data-radix-collection-item=""
+            href="#"
+            rel="ugc"
+          >
+            Pricing
+          </a>
+          <li>
+            <button
+              id="radix-:r0:-trigger-radix-:r2:"
+              data-state="closed"
+              aria-expanded="false"
+              aria-controls="radix-:r0:-content-radix-:r2:"
+              class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group"
+              data-radix-collection-item=""
+            >
+              Resources
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                class="relative top-[1px] ml-1 h-3 w-3 transition duration-300 group-data-[state=open]:rotate-180"
+              >
+                <path
+                  d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </li>
+          <a
+            class="group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+            data-radix-collection-item=""
+            href="#"
+            rel="ugc"
+          ></a>
+        </ul>
+      </div>
+      <div class="absolute left-0 top-full flex justify-center"></div>
+    </nav>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 lg:hidden"
+      type="button"
+      aria-haspopup="dialog"
+      aria-expanded="false"
+      aria-controls="radix-:r3:"
+      data-state="closed"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-6 w-6"
+      >
+        <line x1="4" x2="20" y1="12" y2="12"></line>
+        <line x1="4" x2="20" y1="6" y2="6"></line>
+        <line x1="4" x2="20" y1="18" y2="18"></line>
+      </svg>
+      <span class="sr-only">Toggle na</span>
+    </button>
+  </header>
+
+<body>
+    <!--
+// v0 by Vercel.
+// https://v0.dev/t/M79j5PxjqoF
+-->
+
+<section class="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+    <div class="container px-4 md:px-6">
+      <div class="flex flex-col items-center space-y-4 text-center">
+        <div class="space-y-2">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+            Automate Your Business Workflows
+          </h1>
+          <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
+            Streamline your operations with our powerful business automation tool. Record, scrape, and automate tasks
+            with ease.
+          </p>
+        </div>
+        <div class="space-x-4">
+          <a
+            class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+            href="/index.html"
+          >
+            Get Started
+          </a>
+          <a
+            class="text-white inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+            href="#"
+          >
+            Request Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="w-full py-12 md:py-24 lg:py-32">
+    <div class="container grid grid-cols-1 gap-6 px-4 md:px-6 md:grid-cols-3">
+      <div class="flex flex-col items-center space-y-4 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-12 w-12 text-gray-500 dark:text-gray-400"
+        >
+          <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z"></path>
+          <path d="m13 13 6 6"></path>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-200">Web Recording</h3>
+        <p class="text-gray-500 dark:text-gray-400">
+          Capture and replay user interactions on your website, making it easy to automate repetitive tasks.
+        </p>
+      </div>
+      <div class="flex flex-col items-center space-y-4 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-12 w-12 text-gray-500 dark:text-gray-400"
+        >
+          <path d="M18 11.5V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v1.4"></path>
+          <path d="M14 10V8a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+          <path d="M10 9.9V9a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v5"></path>
+          <path d="M6 14v0a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+          <path d="M18 11v0a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8 2 2 0 1 1 4 0"></path>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-200">Web Scraping</h3>
+        <p class="text-gray-500 dark:text-gray-400">
+          Extract data from websites with ease, and integrate it into your business workflows.
+        </p>
+      </div>
+      <div class="flex flex-col items-center space-y-4 rounded-lg bg-gray-100 p-6 dark:bg-gray-800">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-12 w-12 text-gray-500 dark:text-gray-400"
+        >
+          <path d="M12 8V4H8"></path>
+          <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+          <path d="M2 14h2"></path>
+          <path d="M20 14h2"></path>
+          <path d="M15 13v2"></path>
+          <path d="M9 13v2"></path>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-200">Automation</h3>
+        <p class="text-gray-500 dark:text-gray-400">
+          Automate repetitive tasks and workflows, saving you time and improving efficiency.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+    <div class="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2">
+      <div class="space-y-4">
+        <div class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800 text-gray-200">Testimonials</div>
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-200">What Our Customers Say</h2>
+        <blockquote class="text-lg font-semibold leading-snug lg:text-xl lg:leading-normal xl:text-2xl text-gray-200">
+          “The business automation tool has been a game-changer for our company. It has streamlined our workflows and
+          saved us countless hours.”
+        </blockquote>
+        <div>
+          <div class="font-semibold text-gray-200">Jane Doe</div>
+          <div class="text-sm text-gray-500 dark:text-gray-400 text-gray-200">CEO, Acme Inc</div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-center space-y-4 text-gray-200">
+        <div class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Sign Up</div>
+        <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get Started Today</h2>
+        <form class="flex w-full max-w-sm space-x-2">
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 max-w-lg flex-1"
+            placeholder="Enter your email"
+            type="email"
+          />
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+            type="submit"
+          >
+            Sign Up
+          </button>
+        </form>
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          Sign up to get notified when we launch.
+          <a class="underline underline-offset-2" href="#">
+            Terms &amp; Conditions
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
