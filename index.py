@@ -1,10 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 from selenium.webdriver.chrome.options import Options
-import time
-from script_selenium import run_script
+import random
+from script_selenium import QuotesSpider
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+from scrapy.signalmanager import dispatcher
+from scrapy import signals
+from pathlib import Path
+from flask import Flask, render_template, request
+
 
 
 app = Flask(__name__)
@@ -17,30 +24,24 @@ def index():
 def home():
     return render_template('index.html')
 
-@app.route('/open_window', methods=['POST'])
-def open_window():
+
+@app.route('/start_requesting', methods=['POST']) 
+def start_requesting(self, response):
     if request.method == 'POST':
-        options = Options()
-        options.add_argument("--gui")
-        driver = webdriver.Chrome(options=options)
         url = request.form['url']
-        driver.get(url)
-        print('Opening the window with the url: ' + url)
-        time.sleep(10)
-        input_=driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/textarea')
-        input_.send_keys('Hello World')
-        input_.send_keys(Keys.ENTER)
-        time.sleep(10)
-        driver.title
-        time.sleep(10)
-        print('Script executed')
-        driver.close()
-        print('Window closed')
-        return 'home'
+        rand_number=random.randint(1, 1000)
+        # filename = f"quotes-{rand_number}.html"
+        process = CrawlerProcess(get_project_settings())
+        process.crawl(QuotesSpider, url=url)
+        process.start()
+        page = response.url.split("/")[-2]
+        filename = f"quotes-{page}.html"
+        Path(filename).write_bytes(response.body)
+        self.log(f"Saved file {filename}")
+        return render_template(f"quotes-{page}.html")
     else:
         return 'Error'
-    
-    
+
 
 
 if __name__ == "__main__":
