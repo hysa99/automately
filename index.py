@@ -26,21 +26,17 @@ def home():
 
 
 @app.route('/start_requesting', methods=['POST']) 
-def start_requesting(self, response):
+def start_requesting():
     if request.method == 'POST':
         url = request.form['url']
-        rand_number=random.randint(1, 1000)
-        # filename = f"quotes-{rand_number}.html"
+        filename = "quotes-form.html"
         process = CrawlerProcess(get_project_settings())
-        process.crawl(QuotesSpider, url=url)
+        process.crawl(QuotesSpider, url=url, filename=filename)
         process.start()
-        page = response.url.split("/")[-2]
-        filename = f"quotes-{page}.html"
-        Path(filename).write_bytes(response.body)
-        self.log(f"Saved file {filename}")
-        return render_template(f"quotes-{page}.html")
+        return render_template(filename) # Example: rendering a template for the form
     else:
-        return 'Error'
+        return 'Method Not Allowed', 405
+    
 
 
 

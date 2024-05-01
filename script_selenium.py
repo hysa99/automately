@@ -19,4 +19,6 @@ class QuotesSpider(scrapy.Spider):
         filename = f"quotes-{page}.html"
         Path(filename).write_bytes(response.body)
         self.log(f"Saved file {filename}")
+        
+
 
